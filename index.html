@@ -19,6 +19,7 @@
 				<div class="product-info">
 					<h1>{{ product }}</h1>
 					<p>{{ description }}</p>
+					<p v-show="inStock">In Stock<span v-if="onSale"> On Sale!</span></p>
 					<p><a v-bind:href="link">Read some news</a>
 				</div>
 
