@@ -21,6 +21,20 @@
 					<p>{{ description }}</p>
 					<p v-show="inStock">In Stock<span v-if="onSale"> On Sale!</span></p>
 					<p><a v-bind:href="link">Read some news</a>
+
+					<ul>
+						<li v-for="detail in details">{{ detail }}</li>
+					</ul>
+
+					<div v-for="variant in variants" :key="variant.variantId">
+						<p>{{ variant.variantColor}}</p>
+					</div>
+					
+					<p>Sizes available:</p>
+					<ul>
+						<li v-for="size in sizes">{{ size }}</li>
+					</ul>
+
 				</div>
 
 			</div>
